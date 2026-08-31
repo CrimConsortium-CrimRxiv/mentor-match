@@ -2,9 +2,9 @@
 
 A short, transparent quiz that helps prospective criminology and criminal-justice PhD students discover likely mentors among faculty across the field.
 
-A companion to the [Criminology PhD Faculty Explorer](https://crimconsortium.github.io/criminology-faculty-explorer/), supported by [CrimConsortium](https://crimconsortium.com).
+A companion to the [Criminology PhD Faculty Explorer](https://faculty.crimconsortium.com/), supported by [CrimConsortium](https://crimconsortium.com).
 
-**Live site:** https://crimconsortium.github.io/mentor-match/
+**Live site:** https://mentors.crimconsortium.com/
 
 ## What it is
 
@@ -47,7 +47,7 @@ Common edits, with file pointers:
 python3 build_data.py
 ```
 
-This pulls the latest `data.json` from the [`criminology-faculty-explorer`](https://github.com/crimconsortium/criminology-faculty-explorer) repo and writes a fresh `faculty.js`. The two sites always share the same underlying records.
+This pulls the latest `data.json` from the [`faculty-explorer`](https://github.com/CrimConsortium-CrimRxiv/faculty-explorer) repo and writes a fresh `faculty.js`. The two sites always share the same underlying records.
 
 ## Deploying
 

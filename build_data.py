@@ -11,7 +11,7 @@ import re
 import urllib.request
 from pathlib import Path
 
-EXPLORER_DATA_URL = "https://raw.githubusercontent.com/crimconsortium/criminology-faculty-explorer/main/data.json"
+EXPLORER_DATA_URL = "https://raw.githubusercontent.com/CrimConsortium-CrimRxiv/faculty-explorer/main/data.json"
 OUT = Path(__file__).parent / "faculty.js"
 
 # --------------------------------------------------------------------------
@@ -271,7 +271,7 @@ def main():
         "build_date": data.get("build_date"),
         "build_version": data.get("build_version"),
         "explorer_data_url": EXPLORER_DATA_URL,
-        "explorer_site_url": "https://crimconsortium.github.io/criminology-faculty-explorer/",
+        "explorer_site_url": "https://faculty.crimconsortium.com/",
         "faculty": faculty,
         "topics": [label for (label, _pats) in KEYWORD_TAXONOMY],
         # Ship the full taxonomy with synonym patterns so the client can run

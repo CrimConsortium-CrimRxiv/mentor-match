@@ -887,7 +887,7 @@
     if (f.profile_url) links.push(`<a class="result-link" href="${escapeHtml(f.profile_url)}" target="_blank" rel="noopener">Official profile ↗</a>`);
     if (f.department_url) links.push(`<a class="result-link" href="${escapeHtml(f.department_url)}" target="_blank" rel="noopener">Department ↗</a>`);
     // Always link back to the Faculty Explorer so the two tools stay connected
-    const explorerUrl = (DATA.explorer_site_url || 'https://crimconsortium.github.io/criminology-faculty-explorer/')
+    const explorerUrl = (DATA.explorer_site_url || 'https://faculty.crimconsortium.com/')
       + '?q=' + encodeURIComponent(f.name);
     links.push(`<a class="result-link" href="${escapeHtml(explorerUrl)}" target="_blank" rel="noopener">See in Faculty Explorer ↗</a>`);
     if (f.email) links.push(`<a class="result-link" href="mailto:${escapeHtml(f.email)}">${escapeHtml(f.email)}</a>`);
@@ -1034,7 +1034,7 @@
   const consortiumCount = DATA.faculty.filter((f) => f.consortium).length.toLocaleString();
   els.footerNote.innerHTML = `
     A <a href="https://crimconsortium.com" target="_blank" rel="noopener">CrimConsortium</a> tool, companion to the
-    <a href="${escapeHtml(DATA.explorer_site_url || 'https://crimconsortium.github.io/criminology-faculty-explorer/')}" target="_blank" rel="noopener">Criminology PhD Faculty Explorer</a>.
+    <a href="${escapeHtml(DATA.explorer_site_url || 'https://faculty.crimconsortium.com/')}" target="_blank" rel="noopener">Criminology PhD Faculty Explorer</a>.
     Currently indexing ${facultyCount} faculty across ${institutionCount} departments,
     including ${consortiumCount} at CrimConsortium institutions.
     Your answers stay in your browser — no analytics, no cookies, no storage. Data compiled ${escapeHtml(DATA.build_date || '—')}.
