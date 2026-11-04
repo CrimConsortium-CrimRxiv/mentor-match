@@ -8,6 +8,7 @@ quiz can weight location preferences.
 
 import json
 import re
+import sys
 import urllib.request
 from pathlib import Path
 
@@ -207,8 +208,15 @@ def tier_for(title_cat: str) -> str:
 
 
 def main():
-    print("Downloading explorer data…")
-    raw = urllib.request.urlopen(EXPLORER_DATA_URL, timeout=30).read().decode("utf-8")
+    # Optional: pass a local path to the explorer's data.json (e.g. a sibling
+    # checkout) to skip the download — handy right after pushing a new build,
+    # before the raw.githubusercontent.com cache catches up.
+    if len(sys.argv) > 1:
+        print("Reading explorer data from", sys.argv[1])
+        raw = Path(sys.argv[1]).read_text(encoding="utf-8")
+    else:
+        print("Downloading explorer data…")
+        raw = urllib.request.urlopen(EXPLORER_DATA_URL, timeout=30).read().decode("utf-8")
     data = json.loads(raw)
 
     faculty = []

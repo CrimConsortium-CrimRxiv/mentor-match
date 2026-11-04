@@ -44,7 +44,7 @@ Common edits, with file pointers:
 ## Rebuilding the faculty data
 
 ```bash
-python3 build_data.py
+python3 build_data.py            # or: python3 build_data.py ../faculty-explorer/data.json
 ```
 
 This pulls the latest `data.json` from the [`faculty-explorer`](https://github.com/CrimConsortium-CrimRxiv/faculty-explorer) repo and writes a fresh `faculty.js`. The two sites always share the same underlying records.
